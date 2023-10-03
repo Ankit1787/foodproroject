@@ -3,8 +3,10 @@ const dbConnect= require("./db");
 const cors=require("cors")
 const app=express();
 const bodyParser =require("body-parser")
+const dotenv =require("dotenv")
+const port=process.env.PORT;
 
-const port= 8000;
+
 dbConnect();
 app.use(cors())
 require('dotenv').config()
