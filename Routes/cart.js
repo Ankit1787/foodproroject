@@ -20,14 +20,15 @@ router.post("/cart", async (req, res) => {
       console.log(error.message);
       res.send("server error");
     }
-  } else {
+  } 
+  else {
     try {
       await Order.findOneAndUpdate(
         { email },
         { $push: { Order_data: data } }
-      ).then((cart) => {
+      )
         res.status(200).json(cart);
-      });
+    
     } catch (error) {
       res.send("Server error");
     }
