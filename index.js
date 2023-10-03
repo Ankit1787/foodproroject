@@ -18,7 +18,7 @@ app.use("/api/",require("./Routes/food_items"))
 app.get("/",async(req,res)=>{
     res.send("hello world")
 
-    console.log(result);
+    
 })
 app.listen(port,()=>{
     console.log("server is running on port"+port)
